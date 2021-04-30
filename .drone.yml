@@ -3,6 +3,13 @@ type: docker
 name: default
 
 steps:
+- name: Build C# Project
+  image: mcr.microsoft.com/dotnet/sdk:5.0
+  commands:
+  - cd csharpProject
+  - dotnet build
+  - dotnet test
+
 - name: backend
   image: golang
   commands:
