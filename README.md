@@ -4,7 +4,7 @@ Project to test [DroneCI](https://www.drone.io/)
 ## Roadmap
 Item | Status
 -----|-------
-Create C# project | Pending
+Create C# project | Done
 Build C# Project | Pending
 Build and push docker image for C# project | Pending
 Create Golang project | Pending
