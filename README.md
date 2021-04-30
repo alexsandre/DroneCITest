@@ -5,7 +5,7 @@ Project to test [DroneCI](https://www.drone.io/)
 Item | Status
 -----|-------
 Create C# project | Done
-Build C# Project | Pending
+Build C# Project | Done
 Build and push docker image for C# project | Pending
 Create Golang project | Pending
 Build Golang project | Pending
