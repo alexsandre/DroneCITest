@@ -19,4 +19,4 @@ Build and push docker imager for Node.js project | Pending
 
 ## Build Status
 
-[![Build Status](http://droneserver.brazilsouth.azurecontainer.io/api/badges/alexsandre/DroneCITest/status.svg)](http://droneserver.brazilsouth.azurecontainer.io/alexsandre/DroneCITest)
+[![Build Status](http://159.65.248.96/api/badges/alexsandre/droneCITest/status.svg)](http://159.65.248.96/alexsandre/droneCITest)
