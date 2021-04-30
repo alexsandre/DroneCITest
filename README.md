@@ -1,5 +1,5 @@
 # DroneCITest
-project for tests DroneCI
+Project to test [DroneCI](https://www.drone.io/)
 
 ## Roadmap
 Item | Status
