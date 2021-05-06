@@ -18,13 +18,10 @@ steps:
   - go test
 when:
   branch:
-    exclude:
-    - main
+  - feature/*
   event:
     include:
     - push
-    exclude:
-    - pull_request
 
 ---
 kind: pipeline
