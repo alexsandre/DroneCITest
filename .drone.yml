@@ -17,16 +17,6 @@ steps:
   - go build main.go
   - go test
 
-- name: Publish Go Project
-  image: plugins/docker
-  settings:
-    username: alexsandre
-    password:
-      from_secret: DockerHubToken
-    repo: alexsandre/drone_go_project
-    tags:
-    - latest
-
 ---
 kind: pipeline
 type: docker
