@@ -26,3 +26,9 @@ steps:
     repo: alexsandre/drone_go_project
     tags:
     - latest
+
+trigger:
+  event:
+  - promote
+  target:
+  - production
