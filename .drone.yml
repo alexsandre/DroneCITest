@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: build
+name: Builds features except main
 
 steps:
 - name: Build C# Project
@@ -16,11 +16,17 @@ steps:
   - cd src
   - go build main.go
   - go test
+when:
+  branch:
+    exclude:
+    - main
+  event:
+  - push
 
 ---
 kind: pipeline
 type: docker
-name: publish
+name: Build main and publish docker images
 
 steps:
 - name: Build C# Project
@@ -48,7 +54,35 @@ steps:
     - latest
 
 trigger:
+  branch:
+  - main
   event:
   - promote
+  - push
   target:
   - production
+
+
+---
+kind: pipeline
+type: docker
+name: Build PRs
+
+steps:
+- name: Build C# Project
+  image: mcr.microsoft.com/dotnet/sdk:5.0
+  commands:
+  - cd csharpProject
+  - dotnet build
+  - dotnet test
+
+- name: backend
+  image: golang
+  commands:
+  - cd src
+  - go build main.go
+  - go test
+
+trigger:
+  event:
+  - pull_request
