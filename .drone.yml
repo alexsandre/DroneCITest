@@ -21,7 +21,10 @@ when:
     exclude:
     - main
   event:
-  - push
+    include:
+    - push
+    exclude:
+    - pull_request
 
 ---
 kind: pipeline
