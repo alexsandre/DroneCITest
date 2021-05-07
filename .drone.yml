@@ -15,11 +15,12 @@ steps:
   commands:
   - cd src
   - go build main.go
-when:
-  branch:
-  - feature/*
+trigger:
   event:
   - push
+  branch:
+    exclude:
+    - main
 
 ---
 kind: pipeline
