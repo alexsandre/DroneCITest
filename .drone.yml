@@ -15,7 +15,6 @@ steps:
   commands:
   - cd src
   - go build main.go
-  - go test
 when:
   branch:
   - feature/*
